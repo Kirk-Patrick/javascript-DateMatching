@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="public/css/app-style.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="public/js/main-script.js"></script>
+    <title>Dating site</title>
+
+</head>
+<body>
+    <div class="flex-container">
+        <header>
+            <img src="public/img/heartLogo.png" style="width:30%;height:30%" />
+            <h1 id="page-headerText">Date U Dating Site</h1>
+        </header>
+
+        <form>
+           
+            <div style="display:inline-block;float:left;margin-right:2%">
+                <fieldset>
+                    <legend>User</legend>
+                    <table>
+                        <tr>
+                            <td><label>First Name</label></td>
+                            <td><input id="FIRST_NAME"  pattern=".{3,}"   required title="3 characters minimum" class="form-control" type="text" name="FIRST_NAME" required /></td>
+
+                        </tr>
+                        <tr>
+                            <td><label>Last Name</label></td>
+                            <td><input id="LAST_NAME"  pattern=".{3,}"   required title="3 characters minimum" class="form-control" type="text" name="LAST_NAME" required /></td>
+
+                        </tr>
+                        <tr>
+                            <td><label>DBO</label></td>
+                            <td><input id="DOB" class="form-control" type="date" name="DOB" style="float:left" required /></td>
+
+                        </tr>
+                        <tr>
+                            <td><label>Gender</label></td>
+                            <td>
+                                <select id="GENDER" style="float:left;" onChange="changeBodyTypeData(this.value)">
+                                    <option value="" disabled selected>Select</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                </select>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td><label>Age</label></td>
+                            <td><input id="AGE" class="form-control" style="float:left" type="number" min="18" max="70" readonly /></td>
+
+                        </tr>
+
+                        <tr>
+                            <td><label>Body Type</label></td>
+                            <td>
+                                <select id="BODY_TYPE" style="float:left;">
+                                    <option value="" disabled selected>Select</option>
+                                </select>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td><label>Height</label></td>
+                            <td><input class="form-control" id="HEIGHT" style="float:left" type="number" min="170" max="200" required /></td>
+
+                        </tr>
+
+
+                    </table>
+                </fieldset>
+                    <input style="float:left;  margin-left: 31%; margin-top: 0.5%;" onclick="addnew()" value="Submit" type="button" />
+                    <input style="float:left; margin-left: 31%;margin-top: 1%;" onclick="findMatches()" value="find Matches" type="button" />
+
+            </div>
+            
+
+                    <div class="container-textArea">
+                        <textarea id="showallpersons" class="textArea">
+
+                </textarea>
+                    </div>
+                    <div class="container-textArea">
+                        <textarea id="showMatches" class="textArea">
+
+                </textarea>
+                    </div>
+        </form>
+
+        <footer class="footer">Copyright &copy; Date U</footer>
+    </div>
+
+</body>
+</html>
